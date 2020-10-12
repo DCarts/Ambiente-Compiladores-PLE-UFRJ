@@ -1,2 +1,3 @@
 #!/bin/bash
-docker run --rm --name compiladores -v `pwd`/codigo_fonte:/codigo_fonte compiladores "$@"
+PROJECT_DIR=$(dirname "$(readlink -f "$0")")
+docker run --rm --name compiladores -v $PROJECT_DIR/codigo_fonte:/codigo_fonte compiladores "$@"
