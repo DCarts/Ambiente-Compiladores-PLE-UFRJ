@@ -1,6 +1,5 @@
 .git/
 codigo_fonte/
-.gitignore
 .dockerignore
 Makefile
 Dockerfile
