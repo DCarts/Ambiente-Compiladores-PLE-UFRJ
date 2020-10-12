@@ -1,0 +1,16 @@
+.PHONY: clean all
+
+all: compilador entrada1.txt
+	./compilador < entrada1.txt
+
+compilador: lex.yy.c y.tab.c
+	g++-7 y.tab.c -o compilador -lfl	
+	
+lex.yy.c: compilador.lex
+	flex compilador.lex
+	
+y.tab.c: compilador.yacc
+	bison -o"y.tab.c" compilador.yacc
+
+clean: 
+	rm -f lex.yy.c y.tab.c compilador

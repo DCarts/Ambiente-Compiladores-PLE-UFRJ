@@ -1,0 +1,8 @@
+.git/
+codigo_fonte/
+.gitignore
+.dockerignore
+Makefile
+Dockerfile
+exemplo_Makefile
+run.sh
